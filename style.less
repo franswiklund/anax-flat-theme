@@ -1,9 +1,31 @@
-/** 
+/**
 * Anax Flat theme.
 */
 @import url(modules.less);
 
+/** --------------------------------------------------------------
+ * General
+ */
+.route-,
+.route-report,
+.route-about {
+    font-family: Helvetica, sans-serif;
+}
 
+
+
+/** --------------------------------------------------------------
+ * Header
+ */
+
+.site-header {
+    height: 80px;
+    margin-top: 1em;
+}
+
+.logo-1 {
+    display: none;
+}
 
 /** --------------------------------------------------------------
  *  Logo images
@@ -17,5 +39,59 @@
 .site-logo-text-icon {
     img {
         vertical-align: bottom;
+    }
+}
+
+/** --------------------------------------------------------------
+ * Main
+ */
+.article {
+    min-height: 30em;
+}
+
+.article img {
+    height: auto;
+    width: 300px;
+}
+
+/** --------------------------------------------------------------
+ * Footer
+ */
+
+.content {
+    background-color: #eee;
+    min-height: 100px;
+}
+
+.byline {
+    padding-top: 0.5em;
+}
+
+.footer-column-wrapper {
+    border: none;
+    background-color: #eee;
+}
+/** --------------------------------------------------------------
+ * Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        //width: 100%;
+        display: none;
+    }
+
+    .article img {
+        height: auto;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-column {
+        width: 100%;
     }
 }
