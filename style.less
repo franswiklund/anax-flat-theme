@@ -6,25 +6,32 @@
 /** --------------------------------------------------------------
  * General
  */
-.route-,
-.route-report,
-.route-about {
-    font-family: Helvetica, sans-serif;
+
+a {
+    color: #000;
 }
 
-
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
 
 /** --------------------------------------------------------------
  * Header
  */
 
 .site-header {
-    height: 80px;
-    margin-top: 1em;
+    width: 100%;
+    height: auto;
 }
 
 .logo-1 {
     display: none;
+}
+
+.inner-wrap-header {
+    padding-left: 1em;
 }
 
 /** --------------------------------------------------------------
@@ -45,6 +52,11 @@
 /** --------------------------------------------------------------
  * Main
  */
+
+.breadcrumb-list {
+    padding-left: 0.7em
+}
+
 .article {
     min-height: 30em;
 }
@@ -60,33 +72,44 @@
 
 .content {
     background-color: #eee;
-    min-height: 100px;
+
+    .column(12);
 }
 
-.byline {
-    padding-top: 0.5em;
-}
-
-.footer-column-wrapper {
+.footer-column-wrapper,
+.site-footer {
     border: none;
     background-color: #eee;
 }
+
+.site-footer {
+    padding-top: 2em;
+}
+
 /** --------------------------------------------------------------
  * Responsive design
  */
 img {
-    max-width: 100%;
+    max-width: 1100px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .sidebar {
         //width: 100%;
         display: none;
     }
 
+    .main {
+        .column(12);
+    }
+
     .article img {
         height: auto;
         width: 40%;
+    }
+
+    .rm-default {
+        display: none;
     }
 }
 

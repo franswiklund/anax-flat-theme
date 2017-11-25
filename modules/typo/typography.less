@@ -1,0 +1,87 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+main {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+.hgrid, .route-typography {
+    background-image: url(../img/horisontal-grid-24.png);
+}
+
+/*nav div ul a {
+    @height: 48px;
+    .calcMargin(@height);
+    padding-top: @margin / 2 !important;
+    padding-bottom: @margin / 2 !important;
+}
+*/
+
+.flash-wrap {
+    @height: 186px;
+    height: 186px;
+    .calcMargin(@height);
+    padding-top: @margin / 2 !important;
+    padding-bottom: @magicNumber - 8px;
+}
+
+.breadcrumb-list {
+    font-family: @fontFamilyBody;
+}
+
+.main {
+    margin-top: 7px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: @magicNumber;
+    margin-bottom: @magicNumber;
+}
+
+h1 {
+    .fontSize(@fontSizeH1);
+    font-weight: normal;
+
+    border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+    margin-bottom: @magicNumber - @borderSizeH1;
+
+    // If header below h1, then assume larger margin top
+    & ~ h1,
+    & ~ h2,
+    & ~ h3,
+    & ~ h4,
+    & ~ h5,
+    & ~ h6,
+     {
+        margin-top: @magicNumber * 2;
+    }
+
+    // Single margin when subheader follows directly
+   & + h2 {
+       margin-top: @magicNumber;
+   }
+}
+
+.row .after-main .content .byline p {
+    font-family: @fontFamilyBody;
+    font-size: @fontSizeBody;
+    line-height: 1.5;
+}
+
+.content {
+    min-height: @magicNumber * 5;
+}
+
+.footer {
+    font-family: @fontFamilyBody;
+    font-size: @fontSizeBody;
+    line-height: 1.5;
+}
