@@ -1,0 +1,118 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+
+/** --------------------------------------------------------------
+ * General
+ */
+
+a {
+    color: #000;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/** --------------------------------------------------------------
+ * Header
+ */
+
+.site-header {
+    width: 100%;
+    height: auto;
+}
+
+.logo-1 {
+    display: none;
+}
+
+.inner-wrap-header {
+    padding-left: 1em;
+}
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+/** --------------------------------------------------------------
+ * Main
+ */
+
+.breadcrumb-list {
+    padding-left: 0.7em
+}
+
+.article {
+    min-height: 30em;
+}
+
+.article img {
+    height: auto;
+    width: 300px;
+}
+
+/** --------------------------------------------------------------
+ * Footer
+ */
+
+.content {
+
+    .column(12);
+}
+
+.footer-column-wrapper,
+.site-footer {
+    border: none;
+}
+
+.site-footer {
+    padding-top: 2em;
+}
+
+/** --------------------------------------------------------------
+ * Responsive design
+ */
+img {
+    max-width: 1100px;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+        //width: 100%;
+        display: none;
+    }
+
+    .main {
+        .column(12);
+    }
+
+    .article img {
+        height: auto;
+        width: 40%;
+    }
+
+    .rm-default {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-column {
+        width: 100%;
+    }
+}
